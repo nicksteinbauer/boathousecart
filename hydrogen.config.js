@@ -2,8 +2,11 @@ import {defineConfig} from '@shopify/hydrogen/config';
 
 export default defineConfig({
   shopify: {
-    storeDomain: 'hydrogen-preview.myshopify.com',
-    storefrontToken: '3b580e70970c4528da70c98e097c2fa0',
+    storeDomain: 'boathouse-cart-rental-2023.myshopify.com',
+    storefrontToken: '1df896d8e460879b8537f9a0aeba1b22',
     storefrontApiVersion: '2022-07',
   },
+  logger: {
+    showQueryTiming: true,
+  }
 });

@@ -1,0 +1,62 @@
+
+
+
+
+.heroForm {
+    position: relative;
+    gap: 10px;
+    input {
+        color: $blue;
+    }
+    label span {
+        position: absolute;
+        left: -999em;
+    }
+    .inputContainer {
+        color: $blue;
+        margin-bottom: 10px;
+        @media screen and (min-width: $screen-sm) {
+            margin-bottom: 0;
+        }
+        input, select {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            height: 100%;
+        }
+    }
+    
+}
+
+.inputButton {
+        
+    background: $teal;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-family: $displayText;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    transition: background-color .4s ease;
+    @media screen and (min-width: $screen-sm) {
+        flex: 1;
+        padding: auto;
+    }
+}
+.inputButton:hover {
+    background-color: $ob-orange;
+}
+
+.react-datepicker__navigation-icon--next {
+    left: 2px !important;
+    position: relative !important;
+}
+
+.react-datepicker__navigation-icon--previous {
+    right: -2px !important;
+    position: relative !important;
+    left: auto !important;
+}

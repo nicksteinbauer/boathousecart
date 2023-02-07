@@ -1,0 +1,65 @@
+
+
+.heroContainer {
+    height: 100vh;
+    background-image: url('../../PibHarborBackground.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -75%; right: 0; bottom: 0; left: 0;
+}
+
+.heroOverlay {
+    position: relative;
+    height: 100vh;
+}
+
+.topOverlay {
+    height: 150px;
+    @media screen and (min-width: $screen-md) {
+        height: 200px;
+    }
+    position: absolute;
+    width: 100%;
+    top: 10;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.8+0,0+100;White+to+Transparent */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0.8) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+
+.topLogo {
+    position: absolute;
+    padding-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hero {
+    height: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    padding-top: 178px;
+    
+    @media screen and (min-width: $screen-md) {
+        padding-top: 253px;
+    }
+    .h1 {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-top: 0;
+        text-shadow: 0 0 5px #000000;
+
+    }
+}
+
+.heroFormContainer {
+    padding: 40px;
+    background: rgba(0,0,0,.6);
+    margin-bottom: 64px;
+    
+    
+}

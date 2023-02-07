@@ -1,6 +1,6 @@
 {
-  "name": "kent-basic",
-  "description": "An example using JavaScript in Hydrogen",
+  "name": "cart-rental",
+  "description": "Cart Rental Website",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -15,12 +15,19 @@
   "devDependencies": {
     "@shopify/cli": "3.31.1",
     "@shopify/cli-hydrogen": "3.31.1",
+    "sass": "^1.57.1",
     "vite": "^2.9.13"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
     "@shopify/hydrogen": "^1.6.5",
+    "gsap": "^3.11.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-datepicker": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "clsx": "^1.1.1",
+    "react-scroll": "^1.8.9",
+    "typographic-base": "^1.0.4"
   },
   "author": "nicksm1"
 }
