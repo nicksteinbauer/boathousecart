@@ -29,7 +29,7 @@ function Hero() {
     }, [])
 
     return (
-        <div className='scrollTrigger'>
+        <div id='reserve' className='scrollTrigger'>
             <div 
                 className={`heroContainer`}
                 ref={el => {backScroll = el}}

@@ -10,7 +10,7 @@ import { Layout } from "../../components/Layout.server";
 import ProductCard from "../../components/ProductCard.server";
 import { Suspense } from "react";
 
-import Header from "../../components/Header.client";
+import Header from "../../components/header/Header.client";
 
 
 export default function Collection() {

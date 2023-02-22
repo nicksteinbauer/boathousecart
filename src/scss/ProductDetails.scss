@@ -11,21 +11,38 @@
         @media screen and (min-width: $screen-md) {
             font-size: 2.0em  ;
         }
+        position: relative;
+        padding-bottom: 9px;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: $blue;
+            left: 0;
+            bottom: 0;
+            border-radius: 3px;
+        }
     }
+    padding: 10px 30px 20px;
     @media screen and (min-width: $screen-lg) {
-        padding: 20px 80px;
+        padding: 0 30px;
     }
     > div {
         position: relative;
-        background-color: rgba($color: #fff, $alpha: .4);
         padding: 20px;
-        border-radius: 10px;
+        // background-color: rgba($color: #fff, $alpha: .4);
+        // border-radius: 10px;
         
     }
     h1 {
-        margin-right: 100px;
+        padding-right: 100px;
         padding-top: 0 !important;
     }
+    .productDescription {
+        margin: 10px 0;
+    }
+    
 }
 
 .productForm {
@@ -70,8 +87,8 @@
 
 .productPrice {
     font-family: $displayText;
-    color: $ob-blue;
-    font-size: 1.5em;
+    color: $blue;
+    font-size: 1.6em;
     width: 85px;
     position: absolute;
     right: 20px;
@@ -98,8 +115,8 @@
     }
     
     button.addButton {
-        border: 2px solid $ob-blue;
-        background-color: $ob-blue;
+        border: 2px solid $teal;
+        background-color: $teal;
         span {
             display: block;
         }
@@ -121,3 +138,37 @@
     }
 }
 
+.singleGallery {
+    img {
+        display: block;
+        border-radius: 6px;
+    }
+}
+
+.variants {
+    margin: 10px 0;
+}
+
+.react-datepicker__input-container {
+    display: flex;
+    input {
+        flex: 0 0 49%;
+        border-radius: 6px;
+        border: 2px solid $ob-ltgray;
+        padding: 8px;
+        &:focus-visible {
+            outline: 2px solid $ob-orange;
+        }
+    }
+}
+
+.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::after, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+    left: -20px;
+}
+
+.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {
+    font-weight: bold;
+}
+.react-datepicker__day--disabled, .react-datepicker__month-text--disabled, .react-datepicker__quarter-text--disabled, .react-datepicker__year-text--disabled {
+    font-weight: normal;
+}

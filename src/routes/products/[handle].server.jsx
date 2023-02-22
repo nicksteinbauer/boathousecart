@@ -13,7 +13,9 @@ import ProductDetails from "../../components/ProductDetails.client";
 
 //import { ProductSwimlane } from "../../components/ProductSwimlane.server";
 //import ProductCard from "../../components/ProductCard.server";
-import Header from "../../components/Header.client";
+//import Header from "../../components/header/Header.client";
+
+import HeaderInterior from "../../components/header/HeaderInterior.client";
 
 
 export default function Product({ params }) {
@@ -41,7 +43,7 @@ export default function Product({ params }) {
       <Suspense>
         <Seo type="product" data={product} />
       </Suspense>
-      <Header />
+      <HeaderInterior />
       <div className="header-present">
         <ProductDetails product={product} />
       </div>

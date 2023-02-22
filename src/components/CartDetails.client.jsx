@@ -24,7 +24,7 @@ import {
           aria-labelledby="cart-contents"
           className="cart-contents"
         >
-          <ul className="auto-grid-sm cart-grid">
+          <ul className="auto-grid-cart cart-grid">
             {lines.map((line) => {
               return (
                 <CartLineProvider key={line.id} line={line}>
@@ -114,10 +114,7 @@ import {
         <div className="cartItemContainer">
         
           <div className="cartItemImage">
-            <Image
-              data={merchandise.image}
-              className=""
-            />
+            <Image data={merchandise.image} />
           </div>
   
         
@@ -128,7 +125,7 @@ import {
               </Link>
             </h3>
   
-            <div className="">
+            <div className="cartPrice">
               {(merchandise?.selectedOptions || []).map((option) => (
                 <span key={option.name} className="">
                   {option.name}: {option.value}

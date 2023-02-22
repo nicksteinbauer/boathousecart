@@ -1,8 +1,8 @@
 import React from "react";
 
 
-//import DatePicker from "react-datepicker";
-//import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 class MainForm extends React.Component {
@@ -19,13 +19,17 @@ class MainForm extends React.Component {
   handleChange(event) {    
     this.setState({value: event.target.value});  
   }
-  
+  dateChange = (date) => {
+    this.setState({
+        date: date,
+    });
+};
   handleSubmit(event) {
     //console.log('Cart or Bike Options: ' + this.state.value + ' ' + this.state.date.toLocaleDateString());
 
 
-    if(this.state.value == '6personcart') {
-      window.location.href = '/products/6-person-golf-cart-rental';
+    if(this.state.value == '2personcart' && this.state.date.toLocaleDateString() == '5/5/2023') {
+      window.location.href = '/products/2-person-golf-cart-rental-may-5th-2023';
     }
 
 
@@ -35,7 +39,7 @@ class MainForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className='flex-sm heroForm'>
-        <div className='fifty inputContainer'>
+        <div className='forty inputContainer'>
         <label>
           <span>Pick your favorite flavor:</span>
           <select value={this.state.value} onChange={this.handleChange}>            
@@ -48,9 +52,21 @@ class MainForm extends React.Component {
           </select>
         </label>
         </div>
-        
+        <div className='forty inputContainer'>
+          <label>
+            <span>Pick your Date:</span>
+            <DatePicker
+              type="text"
+              name="date"
+              //dateFormat="dd/MM/yyyy"
+              selected={this.state.date}
+              onChange={this.dateChange}
+              placeholderText="Pick Rental Date"
+            />
+          </label>
+        </div>
 
-        <button type="submit" className='inputButton fifty'>Reserve Now</button>
+        <button type="submit" className='inputButton'>Reserve Now</button>
         
       </form>
     );
