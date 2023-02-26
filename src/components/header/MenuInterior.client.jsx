@@ -3,7 +3,9 @@ import { useState } from 'react'
 import { Link } from '@shopify/hydrogen';
 
 import Modal from 'react-bootstrap/Modal';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+
+import MainForm from '../MainForm.client';
 
     function MenuInterior() {
 
@@ -29,7 +31,7 @@ import { Button } from 'react-bootstrap';
                     </Link>
                 </li>
                 <li className="flex-vertical">
-                    <Link href='' to='/contact'>
+                    <Link href='' to='/location'>
                         <span>Location</span>
                     </Link>
                 </li>
@@ -46,14 +48,9 @@ import { Button } from 'react-bootstrap';
             </ul>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Make Reservation</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                <button variant="secondary" onClick={handleClose}>
-                    Close
-                </button>
-                </Modal.Footer>
+                <Modal.Body><MainForm /></Modal.Body>
             </Modal>
             </>
         )

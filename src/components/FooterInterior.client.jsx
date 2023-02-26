@@ -7,13 +7,13 @@ import { PinLogo } from "./PinLogo";
 import { MainLogo } from "./header/MainLogo";
 import BoathouseBlock from "./BoathouseBlock.client";
 import MainForm from './MainForm.client';
+// import ScrollLinkHome from "./navlinks/ScrollLinkHome.client";
+// import ScrollLink1 from "./navlinks/ScrollLink1.client";
+// import ScrollLink2 from "./navlinks/ScrollLink2.client";
 
-import ScrollLinkHome from "./navlinks/ScrollLinkHome.client";
-import ScrollLink1 from "./navlinks/ScrollLink1.client";
-import ScrollLink2 from "./navlinks/ScrollLink2.client";
 
+function FooterInterior() {
 
-function Footer() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -42,13 +42,13 @@ function Footer() {
                     <h4>Navigation</h4>
                     <ul>
                         <li>
-                            <ScrollLinkHome />
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <ScrollLink1 />
+                            <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <ScrollLink2 />
+                            <Link to="/rates">Rates</Link>
                         </li>
                         <li>
                             <Link to="/location">Location</Link>
@@ -79,4 +79,4 @@ function Footer() {
     )
 
 }
-export default Footer;
+export default FooterInterior;

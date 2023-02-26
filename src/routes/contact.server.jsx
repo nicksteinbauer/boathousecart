@@ -2,15 +2,15 @@ import {
   gql,
   useShopQuery,
   useServerAnalytics,
-  useRouteParams,
+  //useRouteParams,
   ShopifyAnalyticsConstants,
   Seo,
 } from "@shopify/hydrogen";
 import { Suspense } from "react";
 
 import { Layout } from "../components/Layout.server";
-
 import HeaderInterior from "../components/header/HeaderInterior.client";
+import ContactForm from "../components/ContactForm.client";
 import FooterInterior from "../components/FooterInterior.client";
 
 
@@ -44,10 +44,13 @@ export default function Page({params}) {
       <div className="header-present">
         <div className="inside-xl">
           <h1>{page.title}</h1>
-          <div
-            dangerouslySetInnerHTML={{__html: page.body}}
-            className="test testy"
-          />
+          <div className="flex-md paddingTop">
+            <div
+              dangerouslySetInnerHTML={{__html: page.body}}
+              className="forty-nine"
+            />
+            <ContactForm />
+          </div>
         </div>
       </div>
       <FooterInterior />
@@ -56,8 +59,8 @@ export default function Page({params}) {
 }
 
 const PAGE_QUERY = gql`
-  query PageDetails($handle: String!) {
-    page(handle: $handle) {
+  query PageDetails {
+    page(handle: "contact") {
       id
       title
       body

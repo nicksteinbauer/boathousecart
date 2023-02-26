@@ -23,9 +23,24 @@ class MainForm extends React.Component {
   handleSubmit(event) {
     //console.log('Cart or Bike Options: ' + this.state.value + ' ' + this.state.date.toLocaleDateString());
 
+    if(this.state.value == '2personcart') {
+      window.location.href = '/products/2-person-golf-cart-rental';
+    }
+
+    if(this.state.value == '4personcart') {
+      window.location.href = '/products/4-person-golf-cart-rental';
+    }
 
     if(this.state.value == '6personcart') {
       window.location.href = '/products/6-person-golf-cart-rental';
+    }
+
+    if(this.state.value == '24bike') {
+      window.location.href = '/products/bicycle-rentals-24';
+    }
+
+    if(this.state.value == '26bike') {
+      window.location.href = '/products/bicycle-rentals-26';
     }
 
 

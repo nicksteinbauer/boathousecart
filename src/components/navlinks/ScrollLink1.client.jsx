@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 function ScrollLink1() {
     return (
         
-        <Link href='' to='about' smooth={true}>
+        <Link href='' to='about'>
             <span>About</span>
         </Link>
        

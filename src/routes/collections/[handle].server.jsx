@@ -10,8 +10,8 @@ import { Layout } from "../../components/Layout.server";
 import ProductCard from "../../components/ProductCard.server";
 import { Suspense } from "react";
 
-import Header from "../../components/header/Header.client";
-
+import HeaderInterior from "../../components/header/HeaderInterior.client";
+import FooterInterior from "../../components/FooterInterior.client";
 
 export default function Collection() {
   const { handle } = useRouteParams();
@@ -38,7 +38,7 @@ export default function Collection() {
         <Suspense>
             <Seo type="collection" data={collection} />
         </Suspense>
-        <Header />
+        <HeaderInterior />
         <div className="header-present">
             <header className="inside-xl">
                 <h1>
@@ -62,6 +62,7 @@ export default function Collection() {
                 </div>
             </section>
         </div>
+        <FooterInterior />
     </Layout>
   );
 }

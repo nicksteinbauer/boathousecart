@@ -16,6 +16,7 @@ import ProductDetails from "../../components/ProductDetails.client";
 //import Header from "../../components/header/Header.client";
 
 import HeaderInterior from "../../components/header/HeaderInterior.client";
+import FooterInterior from "../../components/FooterInterior.client";
 
 
 export default function Product({ params }) {
@@ -47,7 +48,7 @@ export default function Product({ params }) {
       <div className="header-present">
         <ProductDetails product={product} />
       </div>
-      
+      <FooterInterior />
     </Layout>
   );
 }

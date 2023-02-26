@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 function ScrollLink5() {
     return (
         
-        <Link href='' to='reserve' smooth={true} className='reserveButton'>
+        <Link href='' to='reserve' className='reserveButton'>
             <span>Reserve Now</span>
         </Link>
        
