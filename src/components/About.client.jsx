@@ -5,9 +5,9 @@ import { useRef, useEffect } from "react";
 import { gsap } from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 
-import CartRentalAbout1 from "/CartRentalAbout1.jpg";
-import CartRentalAbout2 from "/CartRentalAbout2.jpg";
-import CartRentalAbout3 from "/CartRentalAbout3.jpg";
+import CartRentalAbout1 from "../assets/CartRentalAbout1.jpg";
+import CartRentalAbout2 from "../assets/CartRentalAbout2.jpg";
+import CartRentalAbout3 from "../assets/CartRentalAbout3.jpg";
 
 function About() {
 

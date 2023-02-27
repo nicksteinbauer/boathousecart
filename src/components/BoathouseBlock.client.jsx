@@ -1,9 +1,9 @@
 import { Link } from "@shopify/hydrogen";
 
-import BH from "/BoathousePins-BH.svg";
-import CR from "/BoathousePins-CR.svg";
-import PB from "/BoathousePins-PB.svg";
-import BC from "/BoathousePins-BC.svg";
+import BH from "../assets/BoathousePins-BH.svg";
+import CR from "../assets/BoathousePins-CR.svg";
+import PB from "../assets/BoathousePins-PB.svg";
+import BC from "../assets/BoathousePins-BC.svg";
 
 function BoathouseBlock() {
 
