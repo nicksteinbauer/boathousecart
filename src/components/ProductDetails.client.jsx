@@ -40,6 +40,7 @@ export default function ProductDetails({ product }) {
 function ProductForm({ product }) {
   const { options, selectedVariant, variants, setSelectedOption } =
     useProductOptions();
+    
   const [startDate, setStartDate] = useState(
     new Date(options[0].values[0])
   );
@@ -57,6 +58,7 @@ function ProductForm({ product }) {
       .format(date)
       .replace(',', '');
 
+
   return (
     <form>
       {
@@ -66,25 +68,39 @@ function ProductForm({ product }) {
               return null;
             }
 
-            return (
-              <div key={name} className='productForm'>
-                <legend>{name}</legend>
-                <div className='always-flex flex-gap-6'>
-                  <DatePicker
-                    includeDates={allowedDates.map(
-                      ({ title }) => new Date(title)
-                    )}
-                    selected={startDate}
-                    dateFormat='MMMM d yyyy'
-                    onChange={(date) => {
-                      const dateFormat = formattedDate(date);
-                      setStartDate(date);
-                      setSelectedOption(name, dateFormat);
-                    }}
-                  />
+            if (name === "Date") {
+              return (
+                <div key={name} className='productForm'>
+                  <legend>{name}</legend>
+                  <div className='always-flex flex-gap-6'>
+                    <DatePicker
+                      includeDates={allowedDates.map(
+                        ({ title }) => new Date(title)
+                      )}
+                      selected={startDate}
+                      dateFormat='MMMM d yyyy'
+                      onChange={(date) => {
+                        const dateFormat = formattedDate(date);
+                        setStartDate(date);
+                        setSelectedOption(name, dateFormat);
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            } else {
+
+              return (
+                <div key={name} className='productForm'>
+                  <legend>{name}</legend>
+                  <div className='always-flex flex-gap-6'>
+                    <OptionRadio name={name} values={values} />
+                  </div>
+                </div>
+              );
+
+            }
+            
           })}
         </div>
       }
