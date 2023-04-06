@@ -1,8 +1,8 @@
 import React from "react";
 
 
-//import DatePicker from "react-datepicker";
-//import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 class MainForm extends React.Component {
@@ -19,28 +19,23 @@ class MainForm extends React.Component {
   handleChange(event) {    
     this.setState({value: event.target.value});  
   }
-  
+  dateChange = (date) => {
+    this.setState({
+        date: date,
+    });
+};
   handleSubmit(event) {
     //console.log('Cart or Bike Options: ' + this.state.value + ' ' + this.state.date.toLocaleDateString());
 
-    if(this.state.value == '2personcart') {
-      window.location.href = '/products/2-person-golf-cart-rental';
-    }
 
-    if(this.state.value == '4personcart') {
-      window.location.href = '/products/4-person-golf-cart-rental';
+    if((this.state.date.toLocaleDateString() == '5/5/2023') && (this.state.value == 'cartrental')) {
+      window.location.href = '/products/may-5-2023';
     }
-
-    if(this.state.value == '6personcart') {
-      window.location.href = '/products/6-person-golf-cart-rental';
+    if((this.state.date.toLocaleDateString() == '5/6/2023') && (this.state.value == 'cartrental')) {
+      window.location.href = '/products/may-6-2023';
     }
-
-    if(this.state.value == '24bike') {
-      window.location.href = '/products/bicycle-rentals-24';
-    }
-
-    if(this.state.value == '26bike') {
-      window.location.href = '/products/bicycle-rentals-26';
+    if((this.state.date.toLocaleDateString() == '5/7/2023') && (this.state.value == 'cartrental')) {
+      window.location.href = '/products/may-7-2023';
     }
 
 
@@ -50,22 +45,30 @@ class MainForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit} className='flex-sm heroForm'>
-        <div className='fifty inputContainer'>
+        <div className='forty inputContainer'>
+          <label>
+            <span>Pick your Date:</span>
+            <DatePicker
+              type="text"
+              name="date"
+              //dateFormat="dd/MM/yyyy"
+              selected={this.state.date}
+              onChange={this.dateChange}
+              placeholderText="Pick Rental Date"
+            />
+          </label>
+        </div>
+        <div className='forty inputContainer'>
         <label>
           <span>Pick your favorite flavor:</span>
           <select value={this.state.value} onChange={this.handleChange}>            
             <option value="">Cart or Bike Options</option>
-            <option value="2personcart">2-Person Cart</option>
-            <option value="4personcart">4-Person Cart</option>
-            <option value="6personcart">6-Person Cart</option>
-            <option value="24bike">24" Bike</option>
-            <option value="26bike">26" Bike</option>
+            <option value="cartrental">Golf Cart Rental</option>
+            <option value="bikerental">Bike Rental</option>
           </select>
         </label>
         </div>
-        
-
-        <button type="submit" className='inputButton fifty'>Reserve Now</button>
+        <button type="submit" className='inputButton'>Reserve Now</button>
         
       </form>
     );

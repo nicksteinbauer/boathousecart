@@ -68,6 +68,7 @@ const PRODUCT_QUERY = gql`
         url
         width
         height
+        id
       }
     }
     ... on Video {

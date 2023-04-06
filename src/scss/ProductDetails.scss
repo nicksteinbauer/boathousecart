@@ -46,44 +46,55 @@
 }
 
 .productForm {
+    margin: 20px 0;
     .flex-gap-6 {
         gap: 6px;
     }
-    // label {
-    //     position: relative;
-    //     //margin-right: 6px;
-    //     //font-size: 1.3em;
-    //     flex: 1;
-    //     text-align: center;
-    //     input {
-    //         position: absolute;
-    //         left: -999em;
-    //     }
-    //     > div {
-    //         padding: 6px 8px;
-    //         border-radius: 6px;
-    //         border: 2px solid $ob-blue;
-    //         transition: all .3s ease;
-    //         cursor: pointer;
-    //     }
-    //     > div:hover {
-    //         background-color: #000 !important;
-    //         color: #fff !important;
-    //     }
-    // }
+    legend {
+        font-size: 1.1em;
+        margin-bottom: 2px;
+    }
+    label {
+        position: relative;
+        //margin-right: 6px;
+        //font-size: 1.3em;
+        flex: 1;
+        text-align: center;
+        input {
+            position: absolute;
+            left: -999em;
+        }
+        > div {
+            padding: 6px 8px;
+            border-radius: 6px;
+            border: 2px solid $ob-ltgray;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+        > div:hover {
+            background-color: $ob-orange !important;
+            color: #fff !important;
+        }
+    }
     
     
-    // .imChecked {
-    //     background-color: $ob-blue;
-    //     color: #fff;
-    // }
-    // .imNotChecked {
-    //     background-color: transparent;
-    //     color: $ob-blue;
-    // }
+    .imChecked {
+        background-color: $ob-orange;
+        color: #fff;
+    }
+    .imNotChecked {
+        background-color: transparent;
+        color: $ob-ltgray;
+    }
 
     
 }
+
+// .productForm:nth-child(2) {
+//     legend {
+//         display: none;
+//     }
+// }
 
 .productPrice {
     font-family: $displayText;
@@ -117,6 +128,8 @@
     button.addButton {
         border: 2px solid $teal;
         background-color: $teal;
+        margin: 0;
+        min-height: 43px;
         span {
             display: block;
         }
@@ -150,7 +163,7 @@
 }
 
 .react-datepicker__input-container {
-    display: flex;
+    display: flex !important;
     input {
         flex: 0 0 49%;
         border-radius: 6px;
@@ -163,7 +176,7 @@
 }
 
 .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::after, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
-    left: -20px;
+    left: -220px !important;
 }
 
 .react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name {

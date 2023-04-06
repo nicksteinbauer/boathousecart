@@ -4,7 +4,7 @@ import {
   MediaFile,
   useProductOptions,
   ProductPrice,
-  BuyNowButton,
+  //BuyNowButton,
   AddToCartButton,
 } from '@shopify/hydrogen';
 import { useState } from 'react';
@@ -61,68 +61,68 @@ function ProductForm({ product }) {
 
   return (
     <form>
-      {
-        <div>
-          {options.map(({ name, values }) => {
-            if (values.length === 1) {
-              return null;
-            }
+    {
+      <div>
+        {options.map(({ name, values }) => {
+          if (values.length === 1) {
+            return null;
+          }
 
-            if (name === "Date") {
-              return (
-                <div key={name} className='productForm'>
-                  <legend>{name}</legend>
-                  <div className='always-flex flex-gap-6'>
-                    <DatePicker
-                      includeDates={allowedDates.map(
-                        ({ title }) => new Date(title)
-                      )}
-                      selected={startDate}
-                      dateFormat='MMMM d yyyy'
-                      onChange={(date) => {
-                        const dateFormat = formattedDate(date);
-                        setStartDate(date);
-                        setSelectedOption(name, dateFormat);
-                      }}
-                    />
-                  </div>
+          if (name === "Date") {
+            return (
+              <div key={name} className='productForm'>
+                <legend>{name}</legend>
+                <div className='always-flex flex-gap-6'>
+                  <DatePicker
+                    includeDates={allowedDates.map(
+                      ({ title }) => new Date(title.split(" ").slice(0, 3).join(" "))
+                    )}
+                    selected={startDate}
+                    dateFormat='MMMM d yyyy'
+                    onChange={(date) => {
+                      const dateFormat = formattedDate(date);
+                      setStartDate(date);
+                      setSelectedOption(name, dateFormat);
+                    }}
+                  />
                 </div>
-              );
-            } else {
+              </div>
+            );
+          } else {
 
-              return (
-                <div key={name} className='productForm'>
-                  <legend>{name}</legend>
-                  <div className='always-flex flex-gap-6'>
-                    <OptionRadio name={name} values={values} />
-                  </div>
+            return (
+              <div key={name} className='productForm'>
+                <legend>{name}</legend>
+                <div className='always-flex flex-gap-6'>
+                  <OptionRadio name={name} values={values} />
                 </div>
-              );
+              </div>
+            );
 
-            }
-            
-          })}
-        </div>
-      }
-      
-      <div className='productPrice'>
-        <ProductPrice
-          className=''
-          priceType='compareAt'
-          variantId={selectedVariant.id}
-          data={product}
-        />
-        <ProductPrice
-          className=''
-          variantId={selectedVariant.id}
-          data={product}
-        />
+          }
+
+        })}
       </div>
-      <div className='buyNow flex-xs justify'>
-        <PurchaseMarkup />
-      </div>
-      
-    </form>
+    }
+
+    <div className='productPrice'>
+      <ProductPrice
+        className=''
+        priceType='compareAt'
+        variantId={selectedVariant.id}
+        data={product}
+      />
+      <ProductPrice
+        className=''
+        variantId={selectedVariant.id}
+        data={product}
+      />
+    </div>
+    <div className='buyNow flex-xs justify'>
+      <PurchaseMarkup />
+    </div>
+
+  </form>
   );
 }
 
@@ -138,13 +138,13 @@ function PurchaseMarkup() {
         quantity={1}
         accessibleAddingToCartLabel='Adding item to your cart'
         disabled={isOutOfStock}
-        className='addButton forty-nine'
+        className='addButton'
       >
         <span className='l'>
           {isOutOfStock ? 'Sold out' : 'Add to cart'}
         </span>
       </AddToCartButton>
-      {isOutOfStock ? (
+      {/* {isOutOfStock ? (
         <span className=''>Available in 2-3 weeks</span>
       ) : (
         <BuyNowButton
@@ -153,7 +153,7 @@ function PurchaseMarkup() {
         >
           <span className=''>Buy it now</span>
         </BuyNowButton>
-      )}
+      )} */}
     </>
   );
 }
@@ -221,7 +221,7 @@ function ProductGallery({ media }) {
         };
 
         return (
-          <div key={data}>
+          <div key={data.image.id}>
             <MediaFile
               tabIndex='0'
               className='media'
