@@ -478,6 +478,357 @@ class MainForm extends React.Component {
       window.location.href = '/products/october-22-2023';
     }
 
+    if((this.state.date.toLocaleDateString() == '5/5/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-5-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/6/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-6-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/7/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-7-2023';
+    }
+
+    if((this.state.date.toLocaleDateString() == '5/12/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-12-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/13/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-13-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/14/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-14-2023';
+    }
+
+    if((this.state.date.toLocaleDateString() == '5/19/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-19-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/20/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-20-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/21/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-21-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/22/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-22-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/23/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-23-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/24/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-24-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/25/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-25-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/26/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-26-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/27/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-27-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/28/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-28-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/29/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-29-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/30/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-30-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '5/31/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-may-31-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/1/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-1-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/2/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-2-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/3/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-3-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/4/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-4-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/5/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-5-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/6/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-6-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/7/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-7-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/8/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-8-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/9/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-9-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/10/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-10-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/11/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-11-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/12/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-12-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/13/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-13-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/14/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-14-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/15/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-15-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/16/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-16-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/17/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-17-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/18/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-18-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/19/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-19-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/20/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-20-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/21/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-21-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/22/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-22-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/23/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-23-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/24/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-24-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/25/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-25-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/26/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-26-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/27/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-27-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/28/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-28-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/29/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-29-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '6/30/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-june-30-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/1/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-1-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/2/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-2-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/3/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-3-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/4/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-4-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/5/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-5-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/6/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-6-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/7/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-7-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/8/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-8-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/9/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-9-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/10/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-10-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/11/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-11-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/12/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-12-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/13/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-13-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/14/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-14-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/15/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-15-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/16/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-16-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/17/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-17-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/18/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-18-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/19/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-19-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/20/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-20-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/21/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-21-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/22/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-22-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/23/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-23-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/24/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-24-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/25/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-25-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/26/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-26-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/27/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-27-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/28/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-28-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/29/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-29-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/30/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-30-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '7/31/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-july-31-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/1/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-1-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/2/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-2-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/3/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-3-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/4/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-4-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/5/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-5-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/6/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-6-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/7/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-7-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/8/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-8-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/9/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-9-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/10/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-10-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/11/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-11-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/12/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-12-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/13/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-13-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/14/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-14-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/15/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-15-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/16/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-16-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/17/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-17-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/18/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-18-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/19/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-19-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/20/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-20-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/21/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-21-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/22/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-22-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/23/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-23-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/24/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-24-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/25/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-25-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/26/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-26-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/27/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-27-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/28/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-28-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/29/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-29-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/30/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-30-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '8/31/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-august-31-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '9/1/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-september-1-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '9/2/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-september-2-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '9/3/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-september-3-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '9/4/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-september-4-2023';
+    }
+    if((this.state.date.toLocaleDateString() == '9/5/2023') && (this.state.value == 'bikerental')) {
+      window.location.href = '/products/bicycle-september-5-2023';
+    }
+
 
     event.preventDefault();
   }
