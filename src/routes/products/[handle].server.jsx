@@ -102,6 +102,24 @@ const PRODUCT_QUERY = gql`
           ...MediaFields
         }
       }
+      relatedtitle1: metafield(namespace: "custom", key: "related_title_1") {
+        value
+      }
+      relatedlink1: metafield(namespace: "custom", key: "related_link_1") {
+        value
+      }
+      relatedtitle2: metafield(namespace: "custom", key: "related_title_2") {
+        value
+      }
+      relatedlink2: metafield(namespace: "custom", key: "related_link_2") {
+        value
+      }
+      relatedtitle3: metafield(namespace: "custom", key: "related_title_3") {
+        value
+      }
+      relatedlink3: metafield(namespace: "custom", key: "related_link_3") {
+        value
+      }
       variants(first: 100) {
         nodes {
           id

@@ -185,3 +185,56 @@
 .react-datepicker__day--disabled, .react-datepicker__month-text--disabled, .react-datepicker__quarter-text--disabled, .react-datepicker__year-text--disabled {
     font-weight: normal;
 }
+
+.galleryContainer {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    @media screen and (min-width: $screen-md) {
+        height: 620px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    > div {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.twopersoncart {
+    .galleryContainer {
+        > div:nth-child(1) {
+            z-index: 10;
+        }
+    }
+}
+.fourpersoncart {
+    .galleryContainer {
+        > div:nth-child(2) {
+            z-index: 10;
+        }
+    }
+}
+.sixpersoncart {
+    .galleryContainer {
+        > div:nth-child(3) {
+            z-index: 10;
+        }
+    }
+}
+
+.recommendModal {
+    .modal-dialog {
+        max-width: 350px;
+        margin-top: 0;
+        margin-bottom: 0;
+        a {
+            color: $teal;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -4,24 +4,32 @@ import {
   MediaFile,
   useProductOptions,
   ProductPrice,
-  //BuyNowButton,
   AddToCartButton,
-} from '@shopify/hydrogen';
-import { useState } from 'react';
-import DatePicker from 'react-datepicker';
+  Link
+} from "@shopify/hydrogen";
+import { useEffect, useState } from "react";
+import DatePicker from "react-datepicker";
 
-import "react-datepicker/dist/react-datepicker.css";
+import Modal from 'react-bootstrap/Modal';
+
 
 export default function ProductDetails({ product }) {
+  const [selectedProductVariant, setSelectedProductVariant] = useState("");
+
+
   return (
     <ProductOptionsProvider data={product}>
-      <section className='flex-md inside-lg'>
-        <div className='forty'>
+      <section
+        className={`flex-md inside-lg ${selectedProductVariant
+          .replace(/\s/g, "")
+          .toLowerCase()}`}
+      >
+        <div className="forty galleryContainer">
           <ProductGallery media={product.media.nodes} />
         </div>
-        <div className='buybox sixty flex-vertical padding-20'>
+        <div className="buybox sixty flex-vertical padding-20">
           <div>
-            <h1 className=''>{product.title}</h1>
+            <h1 className="">{product.title}</h1>
 
             <div
               dangerouslySetInnerHTML={{
@@ -29,149 +37,187 @@ export default function ProductDetails({ product }) {
               }}
             ></div>
 
-            <ProductForm product={product} />
+            <ProductForm
+              setSelectedProductVariant={(data) =>
+                setSelectedProductVariant(data)
+              }
+              product={product}
+            />
           </div>
         </div>
       </section>
+     
     </ProductOptionsProvider>
   );
 }
 
-function ProductForm({ product }) {
+function ProductForm({ product, setSelectedProductVariant }) {
+
+ 
+
   const { options, selectedVariant, variants, setSelectedOption } =
     useProductOptions();
-    
-  const [startDate, setStartDate] = useState(
-    new Date(options[0].values[0])
-  );
+
+  const [startDate, setStartDate] = useState(new Date(options[0].values[0]));
 
   const allowedDates = variants.filter(
     ({ availableForSale }) => availableForSale
   );
 
   const formattedDate = (date) =>
-    new Intl.DateTimeFormat('en-US', {
-      month: 'long',
-      day: 'numeric',
-      year: 'numeric',
+    new Intl.DateTimeFormat("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
     })
       .format(date)
-      .replace(',', '');
+      .replace(",", "");
 
 
-  return (
-    <form>
-    {
-      <div>
-        {options.map(({ name, values }) => {
-          if (values.length === 1) {
-            return null;
-          }
+   // Start of nick test
 
-          if (name === "Date") {
-            return (
-              <div key={name} className='productForm'>
-                <legend>{name}</legend>
-                <div className='always-flex flex-gap-6'>
-                  <DatePicker
-                    includeDates={allowedDates.map(
-                      ({ title }) => new Date(title.split(" ").slice(0, 3).join(" "))
-                    )}
-                    selected={startDate}
-                    dateFormat='MMMM d yyyy'
-                    onChange={(date) => {
-                      const dateFormat = formattedDate(date);
-                      setStartDate(date);
-                      setSelectedOption(name, dateFormat);
-                    }}
-                  />
-                </div>
-              </div>
-            );
-          } else {
-
-            return (
-              <div key={name} className='productForm'>
-                <legend>{name}</legend>
-                <div className='always-flex flex-gap-6'>
-                  <OptionRadio name={name} values={values} />
-                </div>
-              </div>
-            );
-
-          }
-
-        })}
-      </div>
-    }
-
-    <div className='productPrice'>
-      <ProductPrice
-        className=''
-        priceType='compareAt'
-        variantId={selectedVariant.id}
-        data={product}
-      />
-      <ProductPrice
-        className=''
-        variantId={selectedVariant.id}
-        data={product}
-      />
-    </div>
-    <div className='buyNow flex-xs justify'>
-      <PurchaseMarkup />
-    </div>
-
-  </form>
-  );
-}
-
-function PurchaseMarkup() {
-  const { selectedVariant } = useProductOptions();
+  //const { selectedVariant } = useProductOptions();
   const isOutOfStock = !selectedVariant?.availableForSale || false;
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const {
+    relatedtitle1,
+    relatedlink1,
+    
+  } = product;
+
+  const rtitle1 = relatedtitle1?.value ? relatedtitle1?.value : null;
+  const rlink1 = relatedlink1?.value ? relatedlink1?.value : null;
+
+
+  // end of nick test
+
+  
   return (
-    <>
+    <form>
+      {
+        <div>
+          {options.map(({ name, values }) => {
+            if (values.length === 1) {
+              return null;
+            }
+
+            if (name === "Date") {
+              return (
+                <div key={name} className="productForm">
+                  <legend>{name}</legend>
+                  <div className="always-flex flex-gap-6">
+                    <DatePicker
+                      includeDates={allowedDates.map(
+                        ({ title }) =>
+                          new Date(title.split(" ").slice(0, 3).join(" "))
+                      )}
+                      selected={startDate}
+                      dateFormat="MMMM d yyyy"
+                      onChange={(date) => {
+                        const dateFormat = formattedDate(date);
+                        setStartDate(date);
+                        setSelectedOption(name, dateFormat);
+                      }}
+                    />
+                  </div>
+                </div>
+              );
+            } else {
+              return (
+                <div key={name} className="productForm">
+                  <legend>{name}</legend>
+                  <div className="always-flex flex-gap-6">
+                    <OptionRadio
+                      setSelectedProductVariant={(data) =>
+                        setSelectedProductVariant(data)
+                      }
+                      name={name}
+                      values={values}
+                    />
+                  </div>
+                </div>
+              );
+            }
+          })}
+        </div>
+      }
+
+      <div className="productPrice">
+        <ProductPrice
+          className=""
+          priceType="compareAt"
+          variantId={selectedVariant.id}
+          data={product}
+        />
+        <ProductPrice
+          className=""
+          variantId={selectedVariant.id}
+          data={product}
+        />
+      </div>
+      <div className="buyNow flex-xs justify">
       <AddToCartButton
-        type='button'
+        type="button"
         variantId={selectedVariant.id}
         quantity={1}
-        accessibleAddingToCartLabel='Adding item to your cart'
+        accessibleAddingToCartLabel="Adding item to your cart"
         disabled={isOutOfStock}
-        className='addButton'
+        className="addButton"
+        onClick={handleShow}
       >
-        <span className='l'>
-          {isOutOfStock ? 'Sold out' : 'Add to cart'}
-        </span>
+        <span className="l">{isOutOfStock ? "Sold out" : "Add to cart"}</span>
       </AddToCartButton>
-      {/* {isOutOfStock ? (
-        <span className=''>Available in 2-3 weeks</span>
-      ) : (
-        <BuyNowButton
-          variantId={selectedVariant.id}
-          className='nowButton forty-nine'
-        >
-          <span className=''>Buy it now</span>
-        </BuyNowButton>
-      )} */}
-    </>
+      {rlink1 !== null && (
+      <Modal show={show} onHide={handleClose} className="recommendModal">
+          <Modal.Header closeButton>
+          <Modal.Title>Rent Additional Day?</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            
+              <Link to={`/products/${rlink1}`} onClick={handleClose}>
+                <img id="gid://shopify/ImageSource/33484292096311" alt="Boathouse Cart Rental 2 Person Cart" loading="lazy" className="media" src="https://cdn.shopify.com/s/files/1/0717/0375/7111/products/2-Person-Golf-Cart_2d93517e-775e-4428-bc37-105511163f50.jpg?v=1680289983&amp;width=300&amp;height=400&amp;crop=center" width="300" height="400" decoding="async"></img>
+                <h3>{rtitle1}</h3>
+              </Link>
+            
+          </Modal.Body>
+      </Modal>
+      )}
+      </div>
+    </form>
   );
 }
 
-function OptionRadio({ values, name }) {
+
+
+function OptionRadio({ values, name, setSelectedProductVariant }) {
   const { selectedOptions, setSelectedOption } = useProductOptions();
+
+  useEffect(() => {
+    values &&
+      values.find((item) => {
+        if (selectedOptions[name] === item) {
+          const id = `option-${name}-${item}`;
+          id.includes("option-Cart ") && setSelectedProductVariant(item);
+        }
+      });
+  }, [values]);
 
   return (
     <>
       {values.map((value) => {
         const checked = selectedOptions[name] === value;
         const id = `option-${name}-${value}`;
-
+      
         return (
           <label key={id} htmlFor={id}>
             <input
-              className=''
-              type='radio'
+              className=""
+              type="radio"
               id={id}
               name={`option[${name}]`}
               value={value}
@@ -182,7 +228,10 @@ function OptionRadio({ values, name }) {
               }}
             />
             <div
-              className={`${checked ? 'imChecked' : 'imNotChecked'}`}
+              onClick={() =>
+                name === "Cart Size" && setSelectedProductVariant(value)
+              }
+              className={`${checked ? "imChecked" : "imNotChecked"}`}
             >
               {value}
             </div>
@@ -199,15 +248,15 @@ function ProductGallery({ media }) {
   }
 
   return (
-    <div>
+    <>
       {media.map((med, i) => {
         let extraProps = {};
 
-        if (med.mediaContentType === 'MODEL_3D') {
+        if (med.mediaContentType === "MODEL_3D") {
           extraProps = {
-            interactionPromptThreshold: '0',
+            interactionPromptThreshold: "0",
             ar: true,
-            loading: 'eager',
+            loading: "eager",
             disableZoom: true,
           };
         }
@@ -216,25 +265,25 @@ function ProductGallery({ media }) {
           ...med,
           image: {
             ...med.image,
-            altText: med.alt || 'Product image',
+            altText: med.alt || "Product image",
           },
         };
 
         return (
           <div key={data.image.id}>
             <MediaFile
-              tabIndex='0'
-              className='media'
+              tabIndex="0"
+              className="media"
               data={data}
               // @ts-ignore
               options={{
-                crop: 'center',
+                crop: "center",
               }}
               {...extraProps}
             />
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
