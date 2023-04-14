@@ -24,12 +24,11 @@ function Rates() {
                     <h4>2-Person Cart Rates - 2023</h4>
                     <p>
                         <strong>Off-Season</strong><br/>
-                        $14 per hour plus tax <br/>$76 plus tax per day
+                        $73 plus tax per day
                     </p>
                     <p>
                         <strong>Peak Season</strong><br/>
-                        $17 / hour + tax | $19 Weekends | $22 Holidays<br/>
-                        $90 / day + tax | $100 Weekends | $130 Holidays
+                        $95 / day + tax | $105 Sundays | $130 Saturdays &amp; Holidays
                     </p>
                 </div>
                 <div>
@@ -37,12 +36,11 @@ function Rates() {
                     <h4>4-Person Cart Rates - 2023</h4>
                     <p>
                         <strong>Off-Season</strong><br/>
-                        $16 per hour plus tax <br/>$86 plus tax per day
+                        $83 plus tax per day
                     </p>
                     <p>
                         <strong>Peak Season</strong><br/>
-                        $19 / hour + tax | $21 Weekends | $27 Holidays<br/>
-                        $100 / day + tax | $110 Weekends | $141 Holidays
+                        $105 / day + tax | $115 Sundays | $141 Saturdays &amp; Holidays
                     </p>
                 </div>
                 <div>
@@ -50,12 +48,11 @@ function Rates() {
                     <h4>6-Person Cart Rates - 2023</h4>
                     <p>
                         <strong>Off-Season</strong><br/>
-                        $18 per hour plus tax <br/>$96 plus tax per day
+                        $95 plus tax per day
                     </p>
                     <p>
                         <strong>Peak Season</strong><br/>
-                        $17 / hour + tax | $19 Weekends | $22 Holidays<br/>
-                        $90 / day + tax | $100 Weekends | $130 Holidays
+                        $115 / day + tax | $145 Sundays | $190 Saturdays &amp; Holidays
                     </p>
                 </div>
                 <div>
