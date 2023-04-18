@@ -31,7 +31,7 @@
     }
 
     .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::after, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
-        left: -190px !important;
+        left: auto !important;
     }
     
 }
@@ -70,4 +70,15 @@
 
 .react-datepicker__input-container input {
     flex: 0 0 100% !important;
+}
+
+.modal-body {
+    .heroForm {
+        .forty {
+            flex: 1;
+        }
+        .inputButton {
+            flex: 0 0 100%;
+        }
+    }
 }
