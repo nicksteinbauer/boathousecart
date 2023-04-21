@@ -44,6 +44,7 @@ function Hero() {
                         <h1 className={`h1`}>Rent Golf Carts on Put-in-Bay<br/>Rent Bikes on Put-in-Bay</h1>
                         <div className={`inside-sm text-center heroFormContainer`}>
                             <MainForm />
+                            <p className="text-center">New for 2023, Rent your cart overnight for multiple days. </p>
                         </div>
                     </div>
                 </div>

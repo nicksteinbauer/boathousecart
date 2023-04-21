@@ -114,7 +114,7 @@ button.closeButton {
 }
 
 .cartAdjust {
-    width: 100%;
+    width: 200px;
     border: 2px solid #ccc;
     padding: 6px;
     border-radius: 8px;
@@ -158,7 +158,8 @@ button.closeButton {
 }
 
 .cart-contents {
-    padding: 0 20px 20px;
+    padding: 0 20px 0 0;
+    width: 100%;
 }
 
 .cartChildren {
@@ -176,16 +177,15 @@ button.closeButton {
 }
 
 .summary-heading-container {
-    position: fixed;
+    //position: fixed;
     bottom: 0;
-    width: 400px;
+    background-color: #fff;
     @media screen and (min-width: $screen-md) {
-        width: 600px;
+        flex: 0 0 400px;
     }
     box-sizing: border-box;
     
-    border-top: 1px solid #fff;
-    background: $darkBlue;
+    
     .padding-20-10 {
         box-sizing: border-box;
         padding: 15px 20px 10px 20px;
@@ -199,6 +199,7 @@ button.closeButton {
     .shopPayButton {
         width: 100%;
         text-align: center;
+        display: none !important;
     }
 
     .checkoutLink {
@@ -206,10 +207,10 @@ button.closeButton {
         color: #000;
         text-decoration: none;
         padding: 9px 8px 8px;
-        border-radius: 2px;
+        border-radius: 4px;
         display: block;
         margin-bottom: 10px;
-        transition: background-color .3s ease;
+        transition: all .3s ease;
         font-family: $displayText;
         font-size: 1.3em;
         line-height: 1.3;
@@ -217,20 +218,26 @@ button.closeButton {
         text-transform: uppercase;
     }
     .checkoutLink:hover {
-        background-color: #fff;
+        color: #fff;
+        background-color: $teal;
     }
-    shop-pay-button {
+    .shop-pay-button {
         width: 100%;
         height: 3rem;
         display: table;
+        
+    }
+    .shopPayButton {
+        background:#5a31f4;
+        border-radius: 4px;
     }
 }
 
 .emptyCart {
-    padding: 74px 20px 20px;
-    button {
+    padding: 54px 20px 20px;
+    button, a {
         text-transform: uppercase;
-        background-color: $ob-ltltgray;
+        background-color: #fff;
         color: #000;
         text-decoration: none;
         padding: 9px 8px 8px;
@@ -247,6 +254,10 @@ button.closeButton {
         width: 100%;
         margin-top: 10px;
         cursor: pointer;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
     }
     button:hover {
         background-color: #fff;
@@ -257,5 +268,48 @@ button.closeButton {
     color: #898989;
     font-size: .9em;
     margin: 10px 0 5px;
+    span {
+        display: block;
+        
+    }
+}
+
+.cartList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .cartItemImage {
+        flex: 0 0 140px;
+    }
+}
+
+.cartItemContainer {
+    gap: 10px;
+}
+.cartItemContent {
+    flex: 1;
+    h3 {
+        padding-top: 0;
+        a {
+            text-decoration: none;
+            transition: color .3s ease;
+        }
+        a:link, a:active, a:visited {
+            color: $teal;
+        }
+        a:hover {
+            color: $blue;
+        }
+    }
+}
+.flex100 {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+.individualCartItem {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 

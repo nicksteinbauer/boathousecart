@@ -19,12 +19,12 @@ import {
     }
   
     return (
-      <form className="cartChildren">
+      <form className="cartChildren flex-md justify">
         <section
           aria-labelledby="cart-contents"
           className="cart-contents"
         >
-          <ul className="auto-grid-cart cart-grid">
+          <ul className="cartList">
             {lines.map((line) => {
               return (
                 <CartLineProvider key={line.id} line={line}>
@@ -56,12 +56,12 @@ import {
         <h2 className="">
           Your cart is empty
         </h2>
-        <button
-          onClick={onClose}
+        <Link
+          to="/"
           className=""
         >
           Continue shopping
-        </button>
+        </Link>
       </div>
     );
   }
@@ -111,19 +111,26 @@ import {
   
     return (
       <li key={lineId} className="individualCartItem">
-        <div className="cartItemContainer">
+        <div className="cartItemContainer flex-md">
         
           <div className="cartItemImage">
             <Image data={merchandise.image} />
           </div>
   
         
-          <div className="cartItemContent">
-            <h3>
-              <Link to={`/products/${merchandise.product.handle}`}>
-                {merchandise.product.title}
-              </Link>
-            </h3>
+          <div className="cartItemContent flex-vertical">
+
+            <div className="flex-sm justify">
+              <h3>
+                <Link to={`/products/${merchandise.product.handle}`}>
+                  {merchandise.product.title}
+                </Link>
+              </h3>
+
+              <span className="price flex-vertical">
+                <CartLinePrice as="span" />
+              </span>
+            </div>
   
             <div className="cartPrice">
               {(merchandise?.selectedOptions || []).map((option) => (
@@ -162,9 +169,7 @@ import {
               </div>
               
             </div>
-            <span className="price">
-              <CartLinePrice as="span" />
-            </span>
+            
           </div>
           
           
@@ -188,7 +193,7 @@ import {
           >
             &#8722;
           </CartLineQuantityAdjustButton>
-          <div className="flex-vertical flexFullWidth">
+          <div className="flex-vertical flex100">
             <CartLineQuantity
               as="div"
               className=""

@@ -188,9 +188,9 @@ function ProductForm({ product, setSelectedProductVariant }) {
               </Link>
               </>
             )}
-            {rlink1 === null && (
-              <Button onClick={handleClose}>Click Here</Button>
-            )}
+            
+            <Link className="button" to="/cart">View Cart</Link>
+            
           </Modal.Body>
       </Modal>
       

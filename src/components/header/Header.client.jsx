@@ -1,8 +1,5 @@
 import { useRef, useEffect } from "react";
 import { useUrl, Link, useCart } from "@shopify/hydrogen";
-import { Drawer, useDrawer } from "./Drawer.client";
-
-import { CartDetails } from "../CartDetails.client";
 
 
 import { gsap } from 'gsap'
@@ -14,7 +11,6 @@ import { MainLogo } from "./MainLogo";
 
 export default function Header({ shop }) {
     const { pathname } = useUrl();
-    const { isOpen, openDrawer, closeDrawer } = useDrawer();
 
     const isHome = pathname === "/";
 
@@ -38,11 +34,6 @@ export default function Header({ shop }) {
 
     return (
         <>
-            <Drawer open={isOpen} onClose={closeDrawer}>
-                
-                <CartDetails onClose={closeDrawer} />
-                
-            </Drawer>
             <header
                 role="banner"
                 className={`always-flex justify mainHeader padding-10 ${isHome ? "imHome" : "imNotHome"}`}
@@ -60,13 +51,13 @@ export default function Header({ shop }) {
 
                     <MobileMenu />
 
-                    <button
-                        onClick={openDrawer}
+                    <Link
+                        to="/cart"
                         className="cartIcon flex-vertical"
                     >
                         <IconBag />
                         <CartBadge dark={isHome} />
-                    </button>
+                    </Link>
 
                 </div>
             </header>
