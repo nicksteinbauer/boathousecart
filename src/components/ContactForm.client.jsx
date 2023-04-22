@@ -80,7 +80,7 @@ export default class ContactForm extends Component {
         if (Object.keys(errors).length === 0 && this.state.isVerified) {
             console.log(data);
             //Call an api here
-            emailjs.sendForm('absoluterouter', 'arctic_contact', e.target, 'user_vOc0ylPHeC2nCdyLQJAiW')
+            emailjs.sendForm('boathouserouter', 'boathouse_contact', e.target, 'user_vOc0ylPHeC2nCdyLQJAiW')
 
             //Resetting the form
             this.setState(this.getInitialState());
