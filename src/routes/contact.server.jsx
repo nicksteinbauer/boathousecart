@@ -44,7 +44,7 @@ export default function Page({params}) {
       <div className="header-present">
         <div className="inside-xl">
           <h1>{page.title}</h1>
-          <div className="flex-md paddingTop">
+          <div className="paddingTop">
             <div
               dangerouslySetInnerHTML={{__html: page.body}}
             />
