@@ -47,7 +47,6 @@ export default function Page({params}) {
           <div className="flex-md paddingTop">
             <div
               dangerouslySetInnerHTML={{__html: page.body}}
-              className="forty-nine"
             />
             <ContactForm />
           </div>
