@@ -36,7 +36,7 @@ import {
         </section>
         <section
           aria-labelledby="summary-heading"
-          className="summary-heading-container"
+          className="summary-heading-container flex-vertical"
         >
           <div className="padding-20-10">
             <h2 id="summary-heading" className="">

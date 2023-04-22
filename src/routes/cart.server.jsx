@@ -46,6 +46,11 @@ export default function Page({params}) {
       <HeaderInterior />
       <div className="header-present">
         <div className="inside-xl">
+          <div className="flex-md baseline gap10">
+            <h1>{page.title}</h1>
+            <p className="smtext"> - Any discounts will be taken off at checkout.</p>
+          </div>
+          
           <CartInterior />
         </div>
       </div>
