@@ -3,7 +3,7 @@ import {
   useShopQuery,
   CacheLong,
   gql,
-  
+  Seo,
 } from "@shopify/hydrogen";
 
 import { Suspense } from "react";
@@ -32,6 +32,9 @@ export default function Home() {
   return (
     <Layout>
       <Suspense>
+        <SeoForHomepage />
+      </Suspense>
+      <Suspense>
         <Hero />
       </Suspense>
       <Header shop={shop} />
@@ -45,6 +48,31 @@ export default function Home() {
   );
 }
 
+
+
+function SeoForHomepage() {
+  const {
+    data: {
+      shop: {name, description},
+    },
+  } = useShopQuery({
+    query: SHOP_QUERY,
+    cache: CacheLong(),
+    preload: true,
+  });
+
+  return (
+    <Seo
+      type="homepage"
+      data={{
+        title: name,
+        description,
+        titleTemplate: 'Put-in-Bay Golf Cart Rentals | Bike Rentals · %s',
+      }}
+    />
+  );
+}
+
 const SHOP_QUERY = gql`
   query ShopInfo {
     shop {
@@ -53,4 +81,3 @@ const SHOP_QUERY = gql`
     }
   }
 `;
-

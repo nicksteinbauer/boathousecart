@@ -89,7 +89,7 @@ export default class ContactForm extends Component {
             })
 
             Swal.fire({
-              title: "Email Successfully Sent to the ArcticShield Team",
+              title: "Email Successfully Sent to the Boathouse at Put-in-Bay",
               icon: "success",
             });
         } else {
