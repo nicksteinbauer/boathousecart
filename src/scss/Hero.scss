@@ -42,29 +42,63 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccffffff', e
     height: 100%;
     box-sizing: border-box;
     color: #fff;
-    padding-top: 178px;
+    padding-top: 90px;
     
     @media screen and (min-width: $screen-md) {
         padding-top: 253px;
     }
     .h1 {
         text-transform: uppercase;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding-top: 0;
         text-shadow: 0 0 5px #000000;
-
+        @media screen and (min-width: $screen-md) {
+            margin-bottom: 20px;
+        }
     }
 }
 
 .heroFormContainer {
-    padding: 40px;
+    //padding: 20px;
+    padding: 0;
     background: rgba(0,0,0,.6);
     margin-bottom: 64px;
-    
+    @media screen and (min-width: $screen-md) {
+        //padding: 30px;
+    }
     
 }
 
 .imHomeUnder {
     position: relative;
     background-color: #fff;
+}
+
+.bright {
+    background-color: $blue;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.topBanner {
+    text-align: center;
+    color: #fff;
+    background-color: $teal;
+    position: relative;
+    padding: 5px;
+    a {
+        border-radius: 6px;
+        display: inline-block;
+        text-decoration: none;
+        padding: 2px 6px;
+        margin-left: 4px;
+        transition: background-color .3s ease;
+    }
+    a:link, a:active, a:visited {
+        color: #fff;
+        background-color: $blue;
+    }
+    a:hover {
+        background-color: $ob-orange;
+    }
 }
