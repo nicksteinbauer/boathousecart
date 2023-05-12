@@ -183,7 +183,7 @@ function ProductForm({ product, setSelectedProductVariant }) {
               <>
               <p>Would you like to rent an additional day? Click on the product below.</p>
               <Link to={`/products/${rlink1}`} onClick={handleClose} className="always-flex">
-                <img id="gid://shopify/ImageSource/33484292096311" alt="Boathouse Cart Rental 2 Person Cart" loading="lazy" className="media miniImage" src="https://cdn.shopify.com/s/files/1/0717/0375/7111/products/2-Person-Golf-Cart_2d93517e-775e-4428-bc37-105511163f50.jpg?v=1680289983&amp;width=300&amp;height=400&amp;crop=center" decoding="async"></img>
+                <img id="gid://shopify/ImageSource/33484292096311" alt="Boathouse Cart Rental 2 Person Cart" loading="lazy" className="media miniImage" src="https://cdn.shopify.com/s/files/1/0717/0375/7111/files/BoathouseCartRental2Person.jpg?v=1683905041" decoding="async"></img>
                 <h3 className="flex-vertical"><span>{rtitle1}</span></h3>
               </Link>
               </>
