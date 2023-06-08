@@ -50,8 +50,8 @@ function About() {
             </div>
             <div className="fifty padding-20 text-center">
                 <h2><span><PinLogo /></span>About Boathouse Cart and Bike Rental</h2>
-                <h3>Put in Bay Cart Rentals Just Steps from the Jet Express on South Bass Island</h3>
-                <p>Our golf cart fleet consists of both gasoline and electric carts with plenty of speed and range to take you to all parts of South Bass Island. We rent in hourly increments or for the entire day, same day only. You must be at least 18 and have a valid drivers license to rent. Rent online and reserve your golf cart for the day, or visit our rental booth on Hartford Avenue. We rent 2 passenger, 4 passenger and 6 passenger carts at competitive rates. Reserve your Golf Cart now! We also offer overnight rentals available in person at our downtown Put-in-Bay golf cart rental booth. Our bicycle fleet features cruiser style bikes 26 inch sizes. Reserve your bike now!</p>
+                <h3>Put in Bay Golf Cart Rentals - Closest reservable to the Jet Express dock</h3>
+                <p>Our Put-in-Bay golf cart rental fleet consists of both gasoline and electric carts with plenty of speed and range to take you to all parts of South Bass Island. We rent in hourly increments or for the entire day, same day only. You must be at least 18 and have a valid drivers license to rent. Rent online and reserve your golf cart for the day, or visit our rental booth on Hartford Avenue. We rent 2 passenger, 4 passenger and 6 passenger carts at competitive rates. Reserve your Golf Cart now! We also offer overnight rentals available in person at our downtown Put-in-Bay golf cart rental booth. Our bicycle fleet features cruiser style bikes 26 inch sizes. Reserve your bike now!</p>
             </div>
         </section>
     )
