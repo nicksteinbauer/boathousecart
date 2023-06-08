@@ -26,8 +26,8 @@ import MainForm from '../MainForm.client';
                     </Link>
                 </li>
                 <li className="flex-vertical">
-                    <Link href='' to='/rates'>
-                        <span>Rates</span>
+                    <Link href='' to='/products'>
+                        <span>Products</span>
                     </Link>
                 </li>
                 <li className="flex-vertical">

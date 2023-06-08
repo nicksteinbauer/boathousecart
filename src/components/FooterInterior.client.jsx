@@ -48,7 +48,7 @@ function FooterInterior() {
                             <Link to="/about">About</Link>
                         </li>
                         <li>
-                            <Link to="/rates">Rates</Link>
+                            <Link to="/products">Products</Link>
                         </li>
                         <li>
                             <Link to="/location">Location</Link>

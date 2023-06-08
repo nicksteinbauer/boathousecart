@@ -38,7 +38,7 @@ function Hero() {
             <div className={`heroOverlay`}>
                 <div className={`topOverlay`}/>
                 <div className="topBanner">
-                    Rent Golf Carts steps away from the Jet Express <Link to="/location">Location</Link>
+                    Closest reservable Put-in-Bay Golf Cart Rental to the Jet Express dock <Link to="/location">Location</Link>
                 </div>
                 <div className={`topLogo`}>
                     <TopLogo />

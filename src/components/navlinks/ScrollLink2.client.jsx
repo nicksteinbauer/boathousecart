@@ -4,8 +4,8 @@ import { Link } from 'react-scroll';
 function ScrollLink2() {
     return (
         
-        <Link href='' to='rates'>
-            <span>Rates</span>
+        <Link href='' to='products'>
+            <span>Products</span>
         </Link>
        
     )
