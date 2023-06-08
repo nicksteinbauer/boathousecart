@@ -2,10 +2,10 @@ import { PinLogo } from "./PinLogo";
 
 //import { Link } from "@shopify/hydrogen";
 
-import Cart2Person from "../assets/GolfCart2Person.jpg";
-import Cart4Person from "../assets/GolfCart4Person.jpg";
-import Cart6Person from "../assets/GolfCart6Person.jpg";
-import Bike from "../assets/BicycleUpdated.jpg";
+import Cart2Person from "../assets/BoathouseCartRental2Person.jpg";
+import Cart4Person from "../assets/BoathouseCartRental4Person.jpg";
+import Cart6Person from "../assets/BoathouseCartRental6Person.jpg";
+import Bike from "../assets/BicycleUpdatedUpdated.jpg";
 
 function Rates() {
 
