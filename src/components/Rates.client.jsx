@@ -15,7 +15,7 @@ function Rates() {
     return (
         <section id="products" className="rates">
             <div className="text-center inside-md">
-                <h2><span><PinLogo /></span>Products</h2>
+                <h2><span><PinLogo /></span>Our Put-in-Bay Golf Cart Rentals, Bike Rentals</h2>
                 <h3>We offer competitive rates and offer 2, 4, 6 person Put in Bay Golf Carts Rentals as well as 26" Bikes</h3>
             </div>
             <div className="inside-xxl auto-grid-rates">
