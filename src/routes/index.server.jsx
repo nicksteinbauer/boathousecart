@@ -67,7 +67,7 @@ function SeoForHomepage() {
       data={{
         title: name,
         description,
-        titleTemplate: 'Put-in-Bay Golf Cart Rentals | Bike Rentals · %s',
+        titleTemplate: 'Put-in-Bay Golf Cart Rentals, Put-in-Bay Bike Rentals | %s',
       }}
     />
   );
