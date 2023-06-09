@@ -12,7 +12,7 @@ import DatePicker from "react-datepicker";
 
 import Modal from 'react-bootstrap/Modal';
 
-import { Button } from "react-bootstrap";
+//import { Button } from "react-bootstrap";
 
 export default function ProductDetails({ product }) {
   const [selectedProductVariant, setSelectedProductVariant] = useState("");
@@ -77,6 +77,19 @@ function ProductForm({ product, setSelectedProductVariant }) {
 
    // Start of nick test
 
+  
+  const {
+    relatedtitle1,
+    relatedlink1,
+    // added expiration date to every product, you can use this data to set product out of stock
+    expiration
+  } = product;
+
+  const rtitle1 = relatedtitle1?.value ? relatedtitle1?.value : null;
+  const rlink1 = relatedlink1?.value ? relatedlink1?.value : null;
+  // added expiration date to every product, you can use this data to set product out of stock
+  const expirationDate = expiration?.value ? expiration?.value : null;
+
   //const { selectedVariant } = useProductOptions();
   const isOutOfStock = !selectedVariant?.availableForSale || false;
 
@@ -84,15 +97,6 @@ function ProductForm({ product, setSelectedProductVariant }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  const {
-    relatedtitle1,
-    relatedlink1,
-    
-  } = product;
-
-  const rtitle1 = relatedtitle1?.value ? relatedtitle1?.value : null;
-  const rlink1 = relatedlink1?.value ? relatedlink1?.value : null;
 
 
   // end of nick test
@@ -125,6 +129,7 @@ function ProductForm({ product, setSelectedProductVariant }) {
                         setSelectedOption(name, dateFormat);
                       }}
                     />
+                    
                   </div>
                 </div>
               );
@@ -162,6 +167,7 @@ function ProductForm({ product, setSelectedProductVariant }) {
         />
       </div>
       <div className="buyNow flex-xs justify">
+      
       <AddToCartButton
         type="button"
         variantId={selectedVariant.id}

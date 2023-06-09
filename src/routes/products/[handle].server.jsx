@@ -120,6 +120,9 @@ const PRODUCT_QUERY = gql`
       relatedlink3: metafield(namespace: "custom", key: "related_link_3") {
         value
       }
+      expiration: metafield(namespace: "custom", key: "expiration_date") {
+        value
+      }
       variants(first: 100) {
         nodes {
           id
