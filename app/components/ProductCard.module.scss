@@ -1,0 +1,42 @@
+@use "../scss/vars.scss" as vars;
+
+
+.product {
+    img {
+        //background: #fff;
+        border-radius: 6px;
+    }
+    > div {
+        padding: 10px;
+        background-color: rgba(255,255,255,.5);
+        border-radius: 10px;
+    }
+    text-decoration: none;
+    color: #000;
+}
+
+.price {
+    background-color: vars.$ob-blue;
+    display: block;
+    padding: 4px 8px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.titleBar {
+    background-color: #fff;
+    border-radius: 6px;
+    h3 {
+        padding: 0;
+        margin: 0;
+        line-height: 1.2;
+        font-size: 1.0em;
+        @media screen and (min-width: vars.$screen-md) {
+            font-size: 1.3em;
+        }
+    }
+}
+
+.productlist {
+    padding: 20px;
+}
