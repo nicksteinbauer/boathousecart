@@ -74,9 +74,9 @@ function ProductForm({ product, setSelectedProductVariant }) {
       .format(date)
       .replace(",", "");
 
-
    // Start of nick test
 
+  
   
   const {
     relatedtitle1,
@@ -97,6 +97,25 @@ function ProductForm({ product, setSelectedProductVariant }) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  const todaysDate = new Date();
+
+  const now = new Intl.DateTimeFormat('en-CA', {
+    month: '2-digit',
+    day: 'numeric',
+    year: 'numeric'
+  }).format(todaysDate).replace(",", "");
+  
+  const expired = now >= expirationDate;
+
+  // if (now < expirationDate) {
+  //   console.log("Available");
+  // } else {
+  //   console.log("Past");
+  // }
+
+
 
 
   // end of nick test
@@ -165,19 +184,22 @@ function ProductForm({ product, setSelectedProductVariant }) {
           variantId={selectedVariant.id}
           data={product}
         />
+        
       </div>
       <div className="buyNow flex-xs justify">
+
+
       
       <AddToCartButton
         type="button"
         variantId={selectedVariant.id}
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
-        disabled={isOutOfStock}
+        disabled={isOutOfStock || expired}
         className="addButton"
         onClick={handleShow}
       >
-        <span className="l">{isOutOfStock ? "Sold out" : "Add to cart"}</span>
+        <span className="l">{isOutOfStock || expired ? "Sold out" : "Add to cart"}</span>
       </AddToCartButton>
       
       <Modal show={show} onHide={handleClose} className="recommendModal">
