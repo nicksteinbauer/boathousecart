@@ -195,11 +195,11 @@ function ProductForm({ product, setSelectedProductVariant }) {
         variantId={selectedVariant.id}
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
-        disabled={isOutOfStock || expired}
+        disabled={isOutOfStock}
         className="addButton"
         onClick={handleShow}
       >
-        <span className="l">{isOutOfStock || expired ? "Sold out" : "Add to cart"}</span>
+        <span className="l">{isOutOfStock ? "Sold out" : "Add to cart"}</span>
       </AddToCartButton>
       
       <Modal show={show} onHide={handleClose} className="recommendModal">
