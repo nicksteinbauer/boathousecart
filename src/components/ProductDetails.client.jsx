@@ -103,7 +103,7 @@ function ProductForm({ product, setSelectedProductVariant }) {
 
   const now = new Intl.DateTimeFormat('en-CA', {
     month: '2-digit',
-    day: 'numeric',
+    day: '2-digit',
     year: 'numeric'
   }).format(todaysDate).replace(",", "");
   
@@ -195,11 +195,11 @@ function ProductForm({ product, setSelectedProductVariant }) {
         variantId={selectedVariant.id}
         quantity={1}
         accessibleAddingToCartLabel="Adding item to your cart"
-        disabled={isOutOfStock}
+        disabled={isOutOfStock || expired}
         className="addButton"
         onClick={handleShow}
       >
-        <span className="l">{isOutOfStock ? "Sold out" : "Add to cart"}</span>
+        <span className="l">{isOutOfStock || expired ? "Sold out" : "Add to cart"}</span>
       </AddToCartButton>
       
       <Modal show={show} onHide={handleClose} className="recommendModal">
