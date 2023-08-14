@@ -862,11 +862,14 @@ class MainForm extends React.Component {
         <div className='forty inputContainer'>
         <label>
           <span>Pick your favorite flavor:</span>
-          <select value={this.state.value} onChange={this.handleChange}>            
-            <option value="">Cart or Bike Options</option>
-            <option value="cartrental">Golf Cart Rental</option>
-            <option value="bikerental">Bike Rental</option>
-          </select>
+          <div className="select flex-vertical">
+            <select id="standard-select" value={this.state.value} onChange={this.handleChange}>            
+              <option value="">Cart or Bike Options</option>
+              <option value="cartrental">Golf Cart Rental</option>
+              <option value="bikerental">Bike Rental</option>
+            </select>
+            <span className="focus"></span>
+          </div>
         </label>
         </div>
         <button type="submit" className='inputButton'>Reserve Now</button>
