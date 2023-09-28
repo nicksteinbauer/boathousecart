@@ -4,8 +4,8 @@ import { Component } from 'react'
 
 import ScrollLink1 from "../navlinks/ScrollLink1.client";
 import ScrollLink2 from "../navlinks/ScrollLink2.client";
-import ScrollLink3 from "../navlinks/ScrollLink3.client";
-import ScrollLink4 from "../navlinks/ScrollLink4.client";
+// import ScrollLink3 from "../navlinks/ScrollLink3.client";
+// import ScrollLink4 from "../navlinks/ScrollLink4.client";
 import ScrollLink5 from "../navlinks/ScrollLink5.client";
 
 import { Link } from '@shopify/hydrogen';

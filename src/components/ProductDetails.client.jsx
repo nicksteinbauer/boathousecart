@@ -21,7 +21,7 @@ export default function ProductDetails({ product }) {
   return (
     <ProductOptionsProvider data={product}>
       <section
-        className={`flex-md inside-lg ${selectedProductVariant
+        className={`noPadding flex-md inside-lg ${selectedProductVariant
           .replace(/\s/g, "")
           .toLowerCase()}`}
       >
@@ -135,7 +135,10 @@ function ProductForm({ product, setSelectedProductVariant }) {
                 <div key={name} className="productForm">
                   <legend>{name}</legend>
                   <div className="always-flex flex-gap-6">
-                    <DatePicker
+                    
+                    <
+// @ts-ignore
+                    DatePicker
                       includeDates={allowedDates.map(
                         ({ title }) =>
                           new Date(title.split(" ").slice(0, 3).join(" "))
