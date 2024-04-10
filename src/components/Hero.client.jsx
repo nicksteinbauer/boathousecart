@@ -49,7 +49,7 @@ function Hero() {
                         <div className={`inside-sm text-center heroFormContainer`}>
                             <MainForm />
                             <p className="text-center bright">
-                                New for 2023, Rent your golf cart overnight for multiple days.<br/>
+                                Rent your golf cart overnight for multiple days.<br/>
                                 The more days you reserve, the more discount you receive.
                             </p>
                         </div>
